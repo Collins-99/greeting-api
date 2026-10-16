@@ -9,6 +9,12 @@ import java.util.Map;
 @RestController
 public class GreetingController {
 
+
+    @GetMapping("/")
+    public Map<String, String> root() {
+        return Map.of("status", "API is running", "try", "/api/greet?name=YourName");
+    }
+
         @GetMapping("/api/greet")
         public Map<String, String> greet(@RequestParam(defaultValue = "World") String name) {
             return Map.of("message", "Hello, " + name + "!");
