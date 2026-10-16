@@ -12,7 +12,7 @@ public class GreetingController {
 
     @GetMapping("/")
     public Map<String, String> root() {
-        return Map.of("status", "API is running", "try", "/api/greet?name=YourName");
+        return Map.of("status", "API is running", "try", "/api/greet?name=Legacy Code");
     }
 
         @GetMapping("/api/greet")
